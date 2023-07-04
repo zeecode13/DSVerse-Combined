@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+    --primary-color: #4338CA;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+.list-non-bullet {
+    list-style: none;
+    margin: 0px;
+}
+.list-item-inline {
+    display: inline;
+    padding: 0rem 0.5rem; 
+}
+
+.navigation {
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 1rem;
+    color: white;
+    padding: 1rem 1rem;
+}
+.navigation .nav-brand-image {
+    width: 80px;
+    display: inline;
+    padding: 0rem 1rem;
+}
+.navigation .nav-pills {
+    text-align: right;
+}
+
+.hero {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+.hero .hero-image {
+    padding-top: 2rem;
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+.hero .hero-heading {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.container {
+    padding: 0rem 2rem;
+}
+.container-center {
+    max-width: 600px;
+    margin: auto;
+}
+
+.section {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    padding: 1rem;
+    max-width: 600px;
+    border-bottom: 3px solid var(--primary-color);
+
+}
+.off-white {
+    background-color: #E5E7EB;
+}
+
+.link {
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+}
+.link-secondary {
+    padding: 0rem 0.5rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+nav a:hover {
+    padding: 0rem 0.5rem;
+    border: 2px solid white;
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.image {
+    display: block;
+    width: 200px;
+    margin: auto;
+}
+
+.resource-link-style {
+    width: 300px;
+    margin: auto;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    border-top-right-radius: 1rem;
+    color: white;
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: smaller;
+}
+.footer .footer-font-small {
+    font-size:smaller;
+}
+
+.recentNews {
+    background-color: #ffffff  
+}
+.recentNews .news-title {
+    padding-top:30px;
+    padding-bottom:30px;
+    font-size:30px;
+    font-weight:bold;
+    color: #000000;
+}
+.recentNews .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.recentNews .ct-blog {
+    margin-bottom: 30px;
+}
+.ct-blog .inner {
+    background-color: #FFF;
+    padding: 10px;
+    transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+    height: 100%;
+}
+.ct-blog .inner:hover {
+    background-color: #e6e6e6;
+}
+.ct-blog .fauxcrop {
+    overflow: hidden;
+}
+.ct-blog .fauxcrop img {
+    width: 100%;
+}
+.ct-blog-content {
+    display: table;
+    padding: 30px 0 28px;
+}
+.ct-blog-content .ct-blog-date {
+    border-right: 1px solid #95A5A6;
+    display: table-cell;
+    font-family: "Lato", sans-serif;
+    padding: 0px 18px 0px 15px;
+    text-align: center;
+}
+.ct-blog-content .ct-blog-date span {
+    font-size: 16px;
+    color: rgb(20, 117, 175);  
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+.ct-blog-content .ct-blog-date strong {
+    font-size: 25px;
+    color: rgb(20, 117, 175);  
+}
+.ct-blog-content .ct-blog-header {
+    color: #000;
+    display: table-cell;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    line-height: 1.1;
+    padding: 0 20px;
+    vertical-align: top;
+}
+.btn-news {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.btn-news.btn-contests a {
+    color: #fff;
+    font-family: 'nimbus-sans-condensed', sans-serif;
+    font-size: 24px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.btn-news.btn-contests a:hover {
+    color: #000;
+}

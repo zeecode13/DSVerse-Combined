@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Algorithms</title>
+    <link rel="icon" href="../schin_img/logo1.jpg" type="image/icon type">
+    
+    <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet"> -->
+    
+    
+    <link rel="stylesheet" href="../sachin1/sachin_css/style.css">
+</head>
+
+
+<body>
+    
+    <nav id="navbar">
+        <div id="logo">
+
+            <img src="../sachin1/schin_img/logo1.jpg" alt=" ">
+        </div>
+        <ul>
+            <li class="item"><a href="../index.html">Home</a></li>
+            <!-- <li class="item"><a href="#about-us">About Us</a></li> -->
+            <li class="item"><a href="#my-post">My Post</a></li>
+            <li class="item"><a href="#more-tpoics">More Topics</a></li>
+            <!-- <li class="item"><a href="#contact">Contact Us</a></li> -->
+        </ul>
+    </nav>
+    
+
+    <div class="author">
+        <div class="author1">
+
+
+            <img class="im" src="../sachin1/schin_img/author.jpeg" alt=" ">
+        </div>
+        <div class="author1">
+            <h4>
+                Author name
+            </h4>
+            <li>Sachin Jha </li>
+            <li>Front-End Developer</li>
+
+
+        </div>
+
+
+    </div>
+    </div>
+
+    <div class="side1">
+
+        <section>
+            <div class="about">
+
+                <h4>About Me</h4>
+                <div></div>I am Sachin Jha.<br>A Proactive learner and a second year computer science engineering student and I believes in 1 % inspiration and 99 % perspiration.
+            </div>
+        </section>
+        
+
+        <section #my-post>
+
+            <div class="post">
+                <details>
+                    <summary class="postsmry">My Posts</summary>
+                    <section>
+
+                        <details>
+                            <summary class="postsum" style="display: inline-block;">Searching</summary><br>
+                            <p class="para">
+                                #Searching is a technique of finding an element in a given list of clements. List of
+                                elements that could be represented using an : <br>
+                                <br>
+                                (a) Array (b) Linked List (c) A binary tree (d)AB-tree Elements (e)Heap <br>
+                                <br>
+                                Searching technique should be able to locate the
+                                element to be searched as quickly as possible. Many a time, it is necessary to search a
+                                list
+                                of records to identify a particular record. Usually, each record is uniquely identified
+                                by
+                                its key field and searching is carried out on the basis of key field. If search results
+                                in
+                                locating the desired record then the search is to be Successful. Otherwise, the search
+                                operation is said to be unsuccessful. The complexity of any searching algorithm depends
+                                on
+                                number of comparisons required to find the element. Performance of searching algorithm
+                                can
+                                be found by counting the number of comparisons in order to find the given element.
+                            </p>
+
+                        </details>
+
+                        <!-- <section class="postsum"> -->
+                        <details>
+                            <summary class="postsum" style="display: inline-block;">Search Techniques</summary>
+                            <p class="para">
+                                #Some of the standard searching techniques, include : <br>
+                                <br>
+                                1.Sequential search &nbsp;&nbsp;&nbsp; 2. Binary search
+                            </p>
+
+                        </details>
+                    </section>
+
+
+
+
+                    <details>
+                        <summary style="display: inline-block;" class="postsum">Types</summary>
+
+                        <!-- <section class="postsum"> -->
+                        <details>
+                            <summary class="postsum" style="display: inline-block;">linear/Sequential Search</summary>
+                            <p class="para1">
+                                1.Sequential Search :
+                            </p>
+                            <p class="para">
+                                
+                                In sequential search elements are examined sequentially starting from the first clement.
+                                The
+                                process of searching terminates when the list is exhausted or a comparison results in
+                                success. <br>
+                                <br>
+                                Algorithm for searching an element 'key' in an array 'a[ ]' having n elements :
+                                The search algorithm starts comparison between the first element of a[ ] and "key". As
+                                long
+                                as a comparison does not result in success, the algorithm proceeds to compare the next
+                                element of "a[ ]" with "key". The process terminates when the list is exhausted or the
+                                element is found.
+                            </p>
+                            <p class="para1">#'C' function for sequential search.</p>
+
+                            <pre class="pr"><code class="cd">
+                                    int sequential_search(int a[], int key, int n) 
+                                    {
+                                        int i = 0;
+                                        while (i < n) 
+                                        {
+                                            if (a[i] == key)
+                                            {
+                                                return (i);
+                                            }
+                                            i++;
+                                        }
+                                        return (-1);
+                                    }
+                                </code></pre>
+                            <p class="para1">The function returns the index of th element in 'a[ ]' for successful
+                                search. A
+                                value "-1" is
+                                returned if the element is not found.
+                            </p>
+                            <img class="content" src="../sachin1/schin_img/linear-search-initial-array.jpg" alt=" ">
+                            <p class="content">Array to be searched for</p>
+                            <br>
+                            <p class="para1">1. Start from the first element, compare "k" with each element "x".</p>
+                            <img class="content" src="../sachin1/schin_img/linear-search-comparisons.jpg" alt=" ">
+                            <p class="para1">2. If "x == k", return the index.</p>
+                            <img class="content" src="../sachin1/schin_img/linear-search-found.jpg" alt=" ">
+                            <p class="para1">3. Else, return "elements not found"</p>
+
+                            <p class="para1">#Complete program for linear search </p>
+                            <pre class="pr"><code class="cd">
+                                // Linear Search in C++
+    
+                                #include <iostream>
+                                using namespace std;
+                                
+                                int search(int array[], int n, int x) {
+                                
+                                  // Going through array sequencially
+                                  for (int i = 0; i < n; i++){
+                                         if (array[i] == x){
+                                               return i;
+                                         }
+                                         return -1;
+                                  }
+                                };
+                                
+                                int main() {
+                                  int array[] = {2, 4, 0, 1, 9};
+                                  int x = 1;
+                                  int n = sizeof(array) / sizeof(array[0]);
+                                
+                                  int result = search(array, n, x);
+                                
+                                  if(result == -1){
+                                      cout << "Element not found" ;
+                                  }
+                                  else{
+                                      cout << "Element found at index: "<< result;
+                                  }
+                                  
+                                }
+                            </code></pre>
+
+                        </details>
+        
+
+                        <!-- <section class="postsum"> -->
+                        <details>
+                            <summary class="postsum" style="display: inline-block;">Binary Search</summary>
+                            <p class="para1">
+                                2.Binary Search :
+                            </p>
+                            <p class="para">
+                                
+                                Linear search has a time complexity O(n). Such algorithms are not suitable for
+                                searching when number of elements is large. <br>
+                                <br>
+                                Binary search exhibits much better timing
+                                behaviour in case of large volume of data with timing complexity : O(log2 n)
+                                <br>
+                                <br>
+                                Number of comparisons for n = 2<sup>20</sup> (1 million) <br>
+                                Sequential search (in worst case) = 2<sup>20</sup> <br>
+                                Binary search (in worst case) = log <sub>2</sub>2 <sup>20</sup>= 20 comparisons. <br>
+                                <br>
+
+                                Linear search (sequential search) may need 1 million comparisons for searching an element in
+                                an array having 1 million elements. Binary search will require, just 20 comparisons for the
+                                same task. Binary search uses a much better method of searching. Binary search is applicable
+                                only when the given array is sorted. <br>
+                                <br>
+                                1.This method makes a comparison between the "key" (element to be searched) and the middle
+                                element of the array. <br>
+                                2.Since elements are sorted, comparisons may result in either a match or comparison could be
+                                continued with either left half of elements or right half of the elements. <br>
+                                3.Left half of elements could be selected by simply making j = c-1 <br>
+                                4.Right half of element could be selected by simply making i = c+1 <br>
+                                5.Process of selecting either the left half or the right half continues until the element is
+                                found or element is not there. <br>
+                            </p>
+                            <p class="para1"># 'C' Function for binary search (Non-recursive)
+                            <pre class="pr"><code class="cd">
+                                                    
+                    int bin_search(int a[], int i, int j, int key){
+                        int c;
+                        c = (i + j) / 2;
+                        while (a[c] != key && i <= j){
+                        /* search as long as element is not found and it could be there*/
+                            if (key > a[c]){
+                                i = c + 1; // select right half
+                            }
+                            else{
+                                j = c - 1; //select left half
+                            }
+                            c = (i + j) / 2;
+                        }
+                        if (i <= j){
+                            return (c);
+                        }
+                        return (-1);
+                    }
+                                                
+                                            </code></pre>
+                            </p>
+
+                            <p class="para1">
+                                1.Let "x = 4" be the element to be searched :
+                            </p>
+                            <img src="../sachin1/schin_img/binary-search-initial-array.jpg" alt=" " class="content">
+
+                            <p class="para1">
+                                2.Set two pointers low and high at the lowest and the highest positions respectively.
+
+                            </p>
+                            <img src="../sachin1/schin_img/binary-search-set-pointers.jpg" alt=" " class="content">
+
+                            <p class="para1">
+                                3.Finding the middle element "mid" of the array i.e., " arr[(low + high)/2] = 6 ".
+                            </p>
+                            <img src="../sachin1/schin_img/binary-search-mid.jpg" alt=" " class="content">
+
+                            <p class="para1">
+                                4.If " x == mid ", then return " mid ",compare the element to be searchedwith " m ".
+                            </p>
+                            <p class="para1">
+                                5.If " x > mid ", compare " x " with the middle element of the elements on hte right side of " mid
+                                ". This is done by setting " low " to " low = mid + 1".
+                            </p>
+                            <p class="para1">
+                                6.Else, compare " x " with the middle element of the elements on the left side of " mid ". This is
+                                done by setting " high " to " high = mid - 1".
+                            </p>
+                            <img src="../sachin1/schin_img/binary-search-find-mid.jpg" alt=" " class="content">
+
+                            <p class="para1">
+                                7.Repeat steps 3 to 6 until low meets high.
+                            </p>
+                            <img src="../sachin1/schin_img/binary-search-found-654x272-removebg-preview (1) - Copy.png" alt=" " class="content">
+
+                            <p class="para1">
+
+                                8." x = 4 " is found.
+                            </p>
+
+                            <img src="../sachin1/schin_img/binary-search-mid-again-654x272-removebg-preview.png" alt=" " class="content">
+
+
+                            <p class="para1"># Complete program for Binary Search</p>
+
+                            <pre class="pr"><code class="cd">
+                    // Binary Search in C++
+                    #include <iostream>
+                    using namespace std;
+                                                        
+                    int binarySearch(int array[], int x, int low, int high) {
+                                                            
+                    // Repeat until the pointers low and high meet each other
+                    while (low <= high) {
+                            int mid = low + (high - low) / 2;                                
+                            if (array[mid] == x)
+                            return mid;
+                                                        
+                            if (array[mid] < x)
+                            low = mid + 1;
+                    
+                            else
+                            high = mid - 1;
+                        }
+                        return -1;
+                    }
+                    
+                    int main(void) {
+                            int array[] = {3, 4, 5, 6, 7, 8, 9};
+                            int x = 4;
+                            int n = sizeof(array) / sizeof(array[0]);
+                            int result = binarySearch(array, x, 0, n - 1);
+                            if (result == -1)
+                                cout<<"Not found :" ;
+                            else
+                                cout<<"Element is found at index %d", result);
+                    }
+                                            </code></pre>
+                            </p>
+
+
+
+                        </details>
+                        
+                    </details>
+                    <section>
+                        <details class="Selection">
+                            
+                            <summary class="postsum" style="display: inline-block;">Selection of Searching Algorithms
+                            </summary>
+                            <p class="para1">
+                                #Selection of Searching Algorithm</p>
+                                
+                            <p class="para">
+                                1.Linear search should be used when data is not sorted. A linear search may require maximum of N
+                                (no. of elements) comparisons. <br>
+                                2.Linear search is found to be very costly for large database. <br>
+                                3.Binary search should be used when data is sorted.
+                            </p>
+                        </details>
+                    </section>
+                    
+                    
+                    
+                </details>
+            </div>   
+        </section>
+
+        <section #more-topics>
+            <div class="tstm">
+                <details class="Selection">
+                    <summary class="postsum" style="display: inline-block;"><h4>More Topics</h4></summary>
+                    <div>
+                        <a href="../Anas/index_a.html" style="text-decoration: none;">Queue</a>
+                    </div>
+                    <div>
+                        <a href="../z_html/Stack-blog.html" style="text-decoration: none;">Stack</a>
+                    </div>
+                    <div>
+                        <a href="../tanmay-Trees/index_t.html" style="text-decoration: none;">Trees</a>
+
+                    </div>
+                    
+                    <div>
+                        <a href="../PG/index_p.html" style="text-decoration: none;">Arrays</a>
+                    </div>
+                
+                </details>
+
+            </div>
+        </section>
+
+
+    </div>
+
+    
+
+    <footer>
+        <div class="foo">
+            Copyright &copy; www.DSVerse.com. All rights reserved!
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

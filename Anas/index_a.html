@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Queues</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="icon" href="images/logo.jpeg" type="image/icon type">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="recent-news-boxes.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src="images/logo.jpeg" alt="DSVerse.com">
+        </div>
+
+        <ul>
+            <li class="item"><a href="../index.html">Home</a></li>
+            <li class="item"><a href="#Contact">Contact</a></li>
+            <li class="item"><a href="#Contact">Articles</a></li>
+        </ul>
+    </nav>
+<div class="header">
+    <h1>Queues</h1>
+    <p>Linear Data Structure following FIFO</p>
+    <a href="https://www.linkedin.com/in/mohammad-anas-058608171/">Contributed By: Mohammad Anas</a>
+</div>
+
+
+<div class="content">
+    <div class="main">
+        <p>A Queue is a linear structure which follows a particular order in which the
+            operations are performed. The order is First In First Out ( FIFO ).
+            A good example of a queue is any queue of people for anything. Whoever comes first is served first.
+        </p>
+        <img src="images/queue1.png">
+        <div class="basic_intro">
+            <h3>Some Basic Operations</h3>
+              <p>     
+                Queue operations may involve initializing or defining the queue, utilizing it, and then completely erasing it from the memory. Here we shall try to understand the basic operations associated with queues − 
+                <br>
+                <b>enqueue( )</b> − add (store) an item to the queue. 
+                <br>
+                <b>dequeue( )</b> − remove (access) an item from the queue. 
+                <br><br>
+                Few more functions are required to make the above-mentioned queue operation efficient.
+                <br><br>
+                <b>peek( )</b> − Gets the element at the front of the queue without removing it. 
+                <br>
+                <b>isfull( )</b> − Checks if the queue is full. 
+                <br>
+                <b>isempty( )</b> − Checks if the queue is empty. 
+                <br><br>
+                In queue, we always dequeue ( or access) data, pointed by the front pointer and while enqueuing (or storing) data in the queue we take help from the rear pointer. 
+                <br><hr>    
+            </p>
+
+        </div>    
+        <div class="basic_desc">
+            <p><b>peek( )</b></p>
+            <div class="codes">
+                <code><pre>
+                    
+    int peek()
+        { 
+            return queue[front]; 
+        }</pre></code> 
+                    <br>
+            </div>
+              
+            <p><b>isfull( )</b></p>
+            <div class="codes">
+                <code>
+                    <pre>
+                    
+    bool isfull()
+    { 
+        if(rear == MAXSIZE - 1)
+        return true;
+        else 
+        return false; 
+    }
+            </pre>
+</code> 
+            </div>
+            <p><b>isempty( )</b></p>
+            <div class="codes">
+                <p>
+                <code><pre>
+    
+    bool isempty()
+    { 
+        if(front < 0 || front > rear)
+        return true;
+        else
+        return false;
+    } 
+                </pre>
+                </code>
+                </p>
+    
+            </div><!--Codes-->
+            <br>
+            <hr>
+            <h3>Enqueue Operations</h3>
+            <p>
+            Queues maintain two data pointers, front and rear. Therefore, its operations are comparatively more difficult to implement than that of stacks. 
+            <br>The following steps should be taken to enqueue (insert) data into a queue:
+            <b><ol>
+                <li>Check if the queue is full.</li> 
+                <li>If the queue is full, produce an overflow error and exit.</li>
+                <li>If the queue is not full, increment the rear pointer to point to the next empty space.</li>
+                <li>Add data element to the queue location, where the rear is pointing.</li>
+                <li>return success. </li>
+
+            </ol>
+            </b> 
+            Sometimes, we also check to see if a queue is initialized or not, to handle any unforeseen situations. 
+            </p>
+            <div class="codes">
+            <code>
+                <pre>
+    
+    int enqueue(int data) 
+    if(isfull()) 
+    return 0; 
+    rear = rear + 1; 
+    queue[rear] = data; 
+    return 1; 
+    end procedure 
+
+                </pre>
+            </code>
+            </div>
+            <br><br>
+            <hr>
+            <h3>Dequeue</h3>
+            <p>
+                Accessing data from the queue is a process of two tasks: access the data where the front is pointing and remove the data after access. 
+                <br>The following steps are taken to perform dequeue operation:<br>
+                <b><ol>
+                    <li>Check if the queue is empty.</li>
+                    <li>If the queue is empty, produce an underflow error and exit. </li>
+                    <li> If the queue is not empty, access the data where the front is pointing.</li>
+                    <li>Increment front pointer to point to the next available data element.</li>
+                    <li>Return Success</li>
+                </ol>
+                </b>
+            </p>
+            <div class="codes">
+                <code>
+                    <pre>
+    
+    int dequeue() 
+    { 
+        if(isempty()) 
+        return 0; 
+        int data = queue[front]; 
+        front = front + 1; 
+        return data; 
+    } 
+
+                    </pre>
+                </code>
+            </div>
+            <br><br>
+            <hr>
+            <h3>Complexity Analysis</h3>
+            <p>
+                The complexity of enqueue and dequeue operations in a queue using an array is <b>O( 1 )</b>. If you use <b>pop( N )</b> in python code,
+                then the complexity might be <b>O( n )</b> depending on the position of the item to be popped.
+            </p>
+            <hr>
+            <h3>Applications of Queues</h3>
+            <p>
+                <ol>
+                    <li>CPU scheduling, Disk Scheduling</li>
+                    <li>When data is transferred asynchronously between two processes.The queue is used for synchronization. For example: IO Buffers, pipes, file IO, etc</li>
+                    <li>Handling of interrupts in real-time systems.</li>
+                    <li>Call Center phone systems use Queues to hold people calling them in order.</li>
+                </ol>
+            </p>
+            <br>
+            
+            
+            <div class="link-centered link-extra-padded">
+                <a class="link link-primary" href="../index.html">Home</a>
+            </div>
+            
+            <br>
+            <hr>
+            <br>
+            
+            <section class="recentNews">
+              <div class="container">
+                <h2 class="news-title">Recommended Articles</h2>
+                <div class="row">
+                  <div class="ct-blog col-sm-6 col-md-4">
+                    <div class="inner">
+                      <div class="fauxcrop">
+                        <a href="https://anas4u02.medium.com/introduction-to-git-for-linux-8732f1e951e7"><img alt="News Entry" src="images/git_pic.jpeg"></a>
+                      </div>                                                                                                       <!--faux crop-->
+                      <div class="ct-blog-content">
+                        <div class="ct-blog-date">
+                          <span>May</span><strong>31</strong>
+                        </div>                                                                                                     <!--blog date -->
+                        <h3 class="ct-blog-header">
+                          Introduction to Git
+                        </h3>
+                        
+                      </div>                                                                                                       <!--blog content-->
+                    </div>                                                                                                         <!--inner-->
+                  </div>                                                                                                           <!--ct blog col sm col md 4-->
+                  <div class="ct-blog col-sm-6 col-md-4">
+                    <div class="inner">
+                      <div class="fauxcrop">
+                        <a href="https://tanmayz.blogspot.com/2021/05/array-0.html"><img alt="News Entry" src="images/array_tannu.jpg"></a>
+                      </div>
+                      <div class="ct-blog-content">
+                        <div class="ct-blog-date">
+                          <span>June</span><strong>15</strong>
+                        </div>
+                        <h3 class="ct-blog-header">
+                            Why Array[0]
+                        </h3>
+                      </div>                                                                                                            <!--blog content-->
+                    </div>                                                                                                            <!--inner-->
+                  </div>                                                                                                            <!--ct blog col sm 6 col md 4 -->
+                  <div class="ct-blog col-sm-6 col-md-4">
+                    <div class="inner">
+                      <div class="fauxcrop">
+                        <a href="#"><img alt="News Entry" src="images/vacant_space.png"></a>
+                      </div>
+                      <div class="ct-blog-content">
+                        <div class="ct-blog-date">
+                          <span>NA</span><strong>NA</strong>
+                        </div>
+                        <h3 class="ct-blog-header">
+                          
+                        </h3>
+                      </div>                                                                                                        <!--blog content-->
+                    </div>                                                                                                          <!--inner-->
+                  </div>                                                                                                            <!--ct blog col sm 6-->
+                  
+                </div> <!--Row-->
+              </div>   <!-- container-->
+            </section>
+    <iframe height="1000" width="750"  src="https://bot.dialogflow.com/8acab831-79f4-47e7-b002-c5d75379c719"></iframe>
+
+
+
+                
+        </div><!-- basic_desc-->
+    </div><!-- main-->
+</div><!-- content-->
+  
+<section id="Contact">
+  <div class="footer">
+    <h2>Department of Computer Engineering, TCOER</h2>
+    <p>
+        Near Bopdev Ghat, Saswad, Pune, Maharashtra
+    </p>
+    <a href="mailto:anas4u02@gmail.com" class="fa fa-google"></a>
+    <a href="https://www.linkedin.com/in/mohammad-anas-058608171/" class="fa fa-linkedin"></a>
+    <a href="https://twitter.com/m_anas23" class="fa fa-twitter"></a>
+    <a href="https://anas4u02.medium.com/" class="fa fa-medium"></a>
+</div>  
+
+</section>  
+
+
+</body>
+</html>

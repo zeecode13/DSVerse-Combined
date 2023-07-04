@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trees | DS Verse</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navigation">
+        <a href="">
+            <img class="nav-brand-image" src="images/logo.png">
+        </a>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link link-secondary" href="../index.html">home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link link-secondary" href="https://tanmay.netlify.app/index.html">about me</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <img class="hero-image" src="images/tree4.png">
+        <h1 class="hero-heading">Trees</h1>
+    </header>
+
+    <section class="section" style="transition: visibility 1s, opacity 1s; visibility: visible; opacity: 1; margin-top: 0px;">
+      <div class="container container-center">
+        <p>Just like an ordinary tree you see, but the inverted version. Root goes on the top. This is a common phrase you hear when tree is being introduced.</p>
+        <p>Unlike arrays and stacks, tree is a hierarchical data structure. This clearly means that there is a notion of parent and children. And even grandparents of course. Root of the tree has no parent and the leaves have no children yet. Nodes that are not leaves are called internal nodes, having at least one child.</p>
+        <p>Now the trees which can be related to the olden days, called general trees have no restrictions on the number of children. But there are “n-ary trees” which can have at most ‘n’ children. The very famous binary trees can have at most two. Bounded by the laws isn't it?</p>
+      </div>
+    </section>
+    
+
+    <section class="section off-white" style="transition: visibility 1s, opacity 1s; visibility: hidden; opacity: 0;">
+        <div class="container container-center">
+            <h2>general tree</h2>
+            <p>File organization in operating systems use general trees to store directories and files. The leaf nodes are files. Internal nodes can be directories and sub-directories.</p>
+            <p>General tree can be represented as node structure having a data field, reference to the first child and a reference to the next sibling.</p>
+            <p>Here is a general tree node in C++</p>
+            <img class="image" src="images/tree2.png">
+        </div>
+    </section>
+
+    <section class="section" style="transition: visibility 1s, opacity 1s; visibility: hidden; opacity: 0;">
+        <div class="container container-center">
+            <h2>binary search tree</h2>
+            <p>It keeps the data in a sorted fashion allowing the search to be binary which improves the time complexity to O(log n). All nodes to the left of a root are smaller than it and to the right are greater. And this is valid for all sub-trees of the tree.</p>
+            <p>Representation can be done by having a node structure with a data field and a reference to the left and right nodes.</p>
+            <p>The search efficiency can be achieved, only if the tree is always balanced. Balanced here means that the root has almost equal number of elements at right and at it's left. This can be done by using AVL trees.</p>
+            <p>Found this meme on internet to make the idea more clear.</p>
+            <img class="image" src="images/treeMeme.jpeg">
+        </div>
+    </section>
+
+    <section class="section off-white" style="transition: visibility 1s, opacity 1s; visibility: hidden; opacity: 0;">
+        <div class="container container-center">
+            <h2>learning resource</h2>
+            <p>If you are now interested in studying trees, here is a link.</p>
+            <p>This is a video which begins the tree section of "My Code School's" data structure playlist, which is in C++.</p>
+            <div class="resource-link-style">
+            <iframe style="margin: auto;" src="https://www.youtube.com/embed/qH6yxkw0u78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="transition: visibility 1s, opacity 1s; visibility: hidden; opacity: 0; border-bottom: none;">
+        <section class="recentNews">
+            <div class="container container-center">
+              <h2 class="news-title">Recommended Articles</h2>
+              <div class="row">
+                <div class="ct-blog col-sm-6 col-md-4">
+                  <div class="inner">
+                    <div class="fauxcrop">
+                      <a href="https://anas4u02.medium.com/introduction-to-git-for-linux-8732f1e951e7"><img style="width:300px;" alt="News Entry" src="images/git_pic.jpeg"></a>
+                    </div>                                                                                                    <!--faux crop-->
+                    <div class="ct-blog-content">
+                      <div class="ct-blog-date">
+                        <span>May</span><strong>31</strong>
+                      </div>                                                                                                     <!--blog date -->
+                      <h3 class="ct-blog-header">
+                        Introduction to Git
+                      </h3>
+                      
+                    </div>                                                                                                       <!--blog content-->
+                  </div>                                                                                                         <!--inner-->
+                </div>
+                <p>author: Mohammad Anas</p>                                                                                                         <!--ct blog col sm col md 4-->
+                <div class="ct-blog col-sm-6 col-md-4">
+                  <div class="inner">
+                    <div class="fauxcrop">
+                      <a href="https://tanmayz.blogspot.com/2021/05/array-0.html"><img style="width:300px;" alt="News Entry" src="images/array_tannu.jpg"></a>
+                    </div>
+                    <div class="ct-blog-content">
+                      <div class="ct-blog-date">
+                        <span>June</span><strong>15</strong>
+                      </div>
+                      <h3 class="ct-blog-header">
+                          Why Array[0]
+                      </h3>
+                    </div>                                                                                                            <!--blog content-->
+                  </div>                                                                                                            <!--inner-->
+                </div>                                                                                                            <!--ct blog col sm 6 col md 4 -->                                                                                                            <!--ct blog col sm 6-->
+                <p>author: Tanmay Shinde</p>
+              </div> <!--Row-->
+            </div>   <!-- container-->
+          </section>
+    </section>
+
+    <footer class="footer">
+        <p>page contributed by <span style="color: rgb(0, 255, 13);">Tanmay Shinde</span></p>
+        <p>Computer Science department, TCOER, Pune.</p>
+        <p>image credits: Google</p>
+
+        <h5>this page is a part of DSVerse</h5>
+    </footer>
+
+    <script>
+      //get a reference to all the sections
+      var allSections = document.querySelectorAll(".section");
+      var windowHeight = window.innerHeight;
+
+      allSections = Array.from(allSections);
+
+      window.addEventListener("scroll", function scrollHandler() {
+        //for all the sections at each window scroll event
+        for (let section in allSections) {
+          var element = allSections[section];
+          var domRectObj = element.getBoundingClientRect();
+          var top = domRectObj.top;
+          var bottom = domRectObj.bottom;
+          if ((top<2*windowHeight/3 && top>0) || (bottom>windowHeight/3 && bottom<windowHeight) || (top<0 && bottom>windowHeight)) {
+            element.style.opacity = 1;
+            element.style.visibility = "visible";
+          }
+          else {
+            element.style.opacity = 0;
+            element.style.visibility = "hidden";
+          }
+        }
+      })
+    </script>
+</body>
+</html>

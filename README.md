@@ -1,2 +1,2 @@
-# dsverse-f
-A personal blogging website in which  me and my teammates try to write about our journey with Data Structures and the resources which we used.
+# DSVerse
+DSVerse is a user-friendly website designed to help you study and understand data structures and algorithms effortlessly. Our project features an array of web pages that offer code snippets for basic data structures and operations such as searching, sorting, insertion, and deletion. Alongside the code, we provide clear explanations of theoretical concepts, ensuring effective learning. DSVerse is your go-to resource for data structures and algorithms, providing a simple and efficient learning experience.
